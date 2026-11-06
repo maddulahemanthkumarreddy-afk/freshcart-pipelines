@@ -36,8 +36,8 @@ def transform(df: pd.DataFrame, *args, **kwargs) -> pd.DataFrame:
     """
     data = df.copy()
     
-    # Temporarily changed to 0.3 for deliberate CI red test demonstration
-    test_size = kwargs.get('test_size', 0.3)
+    # Configurable test_size parameter (defaults to 0.2 for 80/20 split)
+    test_size = kwargs.get('test_size', 0.2)
     
     train_idx, test_idx = train_test_split(
         data.index,
