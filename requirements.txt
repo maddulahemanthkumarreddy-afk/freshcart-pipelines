@@ -1,0 +1,16 @@
+# FreshCart Data Engineering Pipeline Dependencies
+# Python 3.10 - 3.12 compatible
+
+# Part A & C: ML Pipeline, Testing & CI/CD
+scikit-learn>=1.4.0
+pandas>=2.0.0
+numpy>=1.24.0
+pytest>=8.0.0
+mage-ai>=0.9.70
+
+# Part B & Bonus: Snowflake ELT & Reference APIs
+snowflake-connector-python>=3.0.0
+requests>=2.31.0
+
+# Part D: Real-Time Event Streaming
+pika>=1.3.0

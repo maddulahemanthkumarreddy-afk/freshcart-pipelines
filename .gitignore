@@ -1,0 +1,41 @@
+# =====================================================================
+# FreshCart Pipelines - .gitignore
+# Rules specified in Assignment_DE.pdf: must ignore .env, *.pkl, *.csv, mage.log, __pycache__/
+# =====================================================================
+
+# Environment variables and secrets
+.env
+.env.*
+*.env
+
+# Serialized models & binaries
+*.pkl
+*.pickle
+*.joblib
+
+# Data exports and CSV outputs (e.g., iris_predictions.csv, iris_metrics.csv)
+*.csv
+
+# Mage logs & artifacts
+mage.log
+*.log
+.mage/
+
+# Python cache & compiled bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Local landing folders
+freshcart_landing/
+landing/
