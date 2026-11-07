@@ -49,3 +49,9 @@ landing/
 
 # Temporary Mage files
 iris_project/temp/
+
+# Temporary Mage project scaffold
+iris_mage_temp/
+
+# Python cache directories
+**/__pycache__/
