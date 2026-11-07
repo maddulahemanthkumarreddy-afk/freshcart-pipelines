@@ -55,3 +55,9 @@ iris_mage_temp/
 
 # Python cache directories
 **/__pycache__/
+
+.venv/
+.venv-*/
+__pycache__/
+*.pyc
+.env
