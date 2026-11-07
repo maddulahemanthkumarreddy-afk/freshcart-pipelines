@@ -1,0 +1,89 @@
+blocks:
+  - name: load_iris
+    type: data_loader
+    uuid: load_iris
+    downstream_blocks:
+      - prepare_data
+
+  - name: prepare_data
+    type: transformer
+    uuid: prepare_data
+    upstream_blocks:
+      - load_iris
+    downstream_blocks:
+      - train_model
+
+  - name: train_model
+    type: transformer
+    uuid: train_model
+    upstream_blocks:
+      - prepare_data
+    downstream_blocks:
+      - save_results
+      - evaluate_model
+
+  - name: save_results
+    type: data_exporter
+    uuid: save_results
+    upstream_blocks:
+      - train_model
+  
+
+  - name: evaluate_model
+    type: transformer
+    uuid: evaluate_model
+    upstream_blocks:
+      - train_model
+    downstream_blocks:
+      - export_metrics
+
+  - name: export_metrics
+    type: data_exporter
+    uuid: export_metrics
+    upstream_blocks:
+      - evaluate_model
+
+  # - name: evaluate_model
+  #   type: transformer
+  #   uuid: evaluate_model
+  #   upstream_blocks:
+  #     - train_model
+
+name: iris_classifier
+type: python
+uuid: iris_classifier
+
+
+
+# blocks:
+#   - name: load_iris
+#     type: data_loader
+#     uuid: load_iris
+#     downstream_blocks:
+#       - prepare_data
+
+#   - name: prepare_data
+#     type: transformer
+#     uuid: prepare_data
+#     upstream_blocks:
+#       - load_iris
+#     downstream_blocks:
+#       - train_model
+
+#   - name: train_model
+#     type: transformer
+#     uuid: train_model
+#     upstream_blocks:
+#       - prepare_data
+#     downstream_blocks:
+#       - save_results
+
+#   - name: save_results
+#     type: data_exporter
+#     uuid: save_results
+#     upstream_blocks:
+#       - train_model
+
+# name: iris_classifier
+# type: python
+# uuid: iris_classifier
