@@ -39,3 +39,13 @@ ENV/
 # Local landing folders
 freshcart_landing/
 landing/
+
+# Local Mage virtual environment and IDE files
+.venv-mage/
+.vscode/
+
+# Local SSH tunnel files
+**/.ssh_tunnel/
+
+# Temporary Mage files
+iris_project/temp/
